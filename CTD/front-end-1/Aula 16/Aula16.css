@@ -1,0 +1,63 @@
+@keyframes shake {
+
+    0% {
+
+        transform-origin: bottom right 60px;
+
+        transform: translateX(100px) rotate(180deg);
+
+    }
+
+    100% {
+
+        transform: translateX(-100px) rotate(-180deg);
+
+    }
+
+}
+
+img {
+
+    position: relative;
+    left: 40%;
+    width: 100px;
+    transition: 1s; 
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: shake;
+    animation-;
+
+    
+
+}
+
+i {
+
+    padding: 60px;
+    background-color: aqua;
+    transition: 1s;
+    transform: rotate(180deg);
+    transform: scale(2);
+    transform: skew(25deg);
+    transform: translate(20px, 10px);
+
+}
+
+button {
+
+    background-color:violet;
+ 
+}
+
+button:hover {
+
+    background-color:teal;
+    transition: 1s;
+    transition-property: padding;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+
+}
+
+
