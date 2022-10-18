@@ -1,0 +1,95 @@
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+            body {
+
+                background-color: #181818;
+                font-family: 'Roboto', sans-serif;
+                margin: 72px 0;
+
+            }
+
+            .page-title {
+
+                color: #ec364e;
+                padding-left: 64px;
+                margin-bottom: 6px;
+
+            }
+
+            .page-description {
+
+                padding-left: 64px;
+                color: #ffffff99;
+
+            }
+
+            .videos {
+
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0 auto;
+                gap: 12px;
+
+            }
+
+            .video {
+
+                width: 30%;
+                height: fit-content;
+                margin-top: 24px;
+                padding: 32px 12px;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+
+            }
+
+            .thumbnail {
+
+                width: 100%;
+
+            }
+
+            .video-time {
+
+                color: #ffffff;
+                background-color: #00000080;
+                width: fit-content;
+                float: right;
+                padding: 8px 12px;
+                display: block;
+                transform: translateY(-35px);
+
+            }
+
+            .video-title {
+
+                margin: 8px 0 12px;
+                color: #ffffff;
+
+            }
+
+            .video-description {
+
+                color: #ffffff99;
+                margin: 0;
+
+            }
+
+            .video-views {
+
+                color: #ffffff99;
+                margin-top: 12px;
+                display: block;
+
+            }
+
+            .video-date {
+
+                text-align: right;
+                display: block;
+                color: #ffffff66;
+                font-size: 12px;
+
+            }

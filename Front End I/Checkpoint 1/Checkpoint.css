@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
+
+body {
+
+width: 500px;
+height: 500px;
+background-image: url('https://www.ilhabela.com.br/wp-content/uploads/2020/09/como-chegar-em-ilhabela-balsa-marco-yamin.jpg');
+background-position: right;
+background-repeat: no-repeat;
+background-color: rgb(41, 85, 105);
+
+}
+
+
+.fa {
+
+position: relative;
+
+}
+
+header {
+
+padding-left: 15px;
+padding-right: 15px;
+
+}
+
+h1 {
+    
+font-family: 'Roboto', sans-serif;
+color: aliceblue;
+position: relative;
+
+}
+
+p {
+
+position: relative;
+margin-top: 50px;
+width: 500px;
+height: 500px;
+font-family: 'IBM Plex Sans KR', sans-serif;
+color: aliceblue;
+
+}
+
+iframe {
+
+margin-top: 50px;
+position: relative;
+
+}
+
+ul {
+
+font-family: 'Roboto', sans-serif;
+color: aliceblue;
+
+}
+

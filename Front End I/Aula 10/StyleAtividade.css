@@ -1,0 +1,45 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+
+font-family: 'STIX Two Math', serif;
+background-image: url('https://img.freepik.com/vetores-gratis/fundo-preto-com-foco-de-luz_1017-27230.jpg?size=626&ext=jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+width: 1200px;
+height: 1200px;
+padding: 100;
+
+}
+
+.botao {
+
+position: absolute;
+top: 40%;
+left: 40%;
+margin-right: -50%;
+border: 3px;
+border-radius: 3px;
+color: #3700ff;
+width: 120px;
+height: 50px;
+text-align: center;
+
+}
+
+h1 {
+
+font-family: 'Roboto', sans-serif;
+text-align: center;
+color: #ec364e;
+
+}
+
+h2 {
+
+font-family: 'Roboto', sans-serif;
+text-align: center;
+color: #ec364e;
+
+}

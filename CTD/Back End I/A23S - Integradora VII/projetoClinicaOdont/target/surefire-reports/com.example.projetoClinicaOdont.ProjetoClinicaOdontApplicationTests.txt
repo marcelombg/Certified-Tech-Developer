@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.projetoClinicaOdont.ProjetoClinicaOdontApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.128 s - in com.example.projetoClinicaOdont.ProjetoClinicaOdontApplicationTests

@@ -1,0 +1,47 @@
+body {
+
+height: 4000px;
+    
+}
+
+p {
+
+margin: 30px;
+padding: 80px;
+text-align: center;
+        
+}    
+
+.box {
+    
+width: 250px;
+height: 250px;
+
+}
+    
+.box1 {
+    
+background-color: blueviolet;
+position: absolute;
+left: 50px;
+top: 0;
+    
+}
+    
+.box2 {
+    
+background-color: rgb(226, 110, 43);
+position: absolute;
+right: 50px;
+top: 0;
+    
+}
+    
+.box3 {
+    
+background-color: rgb(183, 250, 0);
+position: fixed;
+bottom: 0;
+left: calc(50% - 250px / 2);
+
+}
