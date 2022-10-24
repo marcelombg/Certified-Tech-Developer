@@ -1,7 +1,6 @@
 import './style.scss'
-import gif1 from './../../assets/images/giphy5.gif'
 
-export function TerceiraAula () {
+export function QuartaAula () {
 
     const components = [
         {
@@ -23,16 +22,6 @@ export function TerceiraAula () {
             name: 'Component Card 4',
             description: 'teste 4',
             image: 'https://media2.giphy.com/media/PjOHE76srQkzWbRN7Y/giphy.gif?cid=ecf05e476b2kpac8fyplah4qavhk6gxig31s30vfbaqnv20a&rid=giphy.gif&ct=g'
-        },
-        {
-            name: 'Component Card 5',
-            description: 'teste 5',
-            image: 'https://media1.giphy.com/media/zfNAMCrhSQzte/giphy.gif?cid=ecf05e4729rnsaaqxhb2f5j3ntolqu9zog6bdykp12vo2di4&rid=giphy.gif&ct=g'
-        },
-        {
-            name: 'Component Card 6',
-            description: 'teste 6',
-            image: 'https://media2.giphy.com/media/U2nN0ridM4lXy/giphy.gif?cid=ecf05e4729rnsaaqxhb2f5j3ntolqu9zog6bdykp12vo2di4&rid=giphy.gif&ct=g'
         }
     ]
 

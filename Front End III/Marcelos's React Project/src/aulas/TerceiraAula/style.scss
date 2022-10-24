@@ -23,3 +23,30 @@ h1 {
     color: rgb(68, 0, 255);
     text-align: center;   
 }
+
+h1 {
+    color: rgb(68, 0, 255);
+    text-align: center;   
+}
+
+p {
+    color: rgb(202, 223, 247);
+    width: auto;
+    align-items: center;
+    text-align: center;
+}
+
+ul {
+    padding-top: 50px;
+    width: 100px;
+    height: max-content;
+    position: relative;
+    left: 15%;
+    display: flex;
+}
+
+li {
+    width: auto;
+    text-align: left;
+    float: right;
+}
