@@ -12,12 +12,13 @@ export function InstagramTimeLine() {
             location: 'São Paulo',
             media: 'https://i.pinimg.com/550x/25/d9/a0/25d9a03d9fa83dafca13be3d953c1a9b.jpg',
             likes: 22,
+            description: 'Ele se prendeu',
             comments: [
                 {
                     author: {
                         name: 'Stephanie J. Williams'
                     },
-                    text: '❤❤❤'
+                    text: '🖤💜💚💛'
                 }
             ]
         },
@@ -29,6 +30,7 @@ export function InstagramTimeLine() {
             location: 'Rio Grande do Sul',
             media: 'https://i.pinimg.com/564x/7d/0e/2d/7d0e2dff94eca2b75b2de47e5e3e8ef3.jpg',
             likes: 201,
+            description: 'Miar :(',
             comments: [
                 {
                     author: {
@@ -46,6 +48,7 @@ export function InstagramTimeLine() {
             location: 'Maranhão',
             media: 'https://i.pinimg.com/564x/78/be/0b/78be0b6c91c6e0c32ec11157bac14a5f.jpg',
             likes: 44,
+            description: 'Tem alguma coisa de errado com o Claudio',
             comments: [
                 {
                     author: {
@@ -69,6 +72,7 @@ export function InstagramTimeLine() {
             location: 'Brasília',
             media: 'https://i.pinimg.com/564x/9b/b8/45/9bb8453a09698400af77580ab4c9df1d.jpg',
             likes: 72,
+            description: '🐱🍷',
             comments: [
                 {
                     author: {
@@ -113,6 +117,8 @@ export function InstagramTimeLine() {
                                         <section className='post-infos'>
                                             {/* Utilização da Interpolação para exibirmos a Quantidade de Likes do Post */}
                                             <span className='likeds'>Curtido por {post.likes} pessoas</span>
+                                            {/* Utilização da Interpolação para exibirmos a Descrição do Post */}
+                                            <p className='description'>{post.description}</p>
                                         </section>
                                         <ul className='comments'>
 
