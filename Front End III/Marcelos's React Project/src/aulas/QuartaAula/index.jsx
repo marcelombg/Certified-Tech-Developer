@@ -6,39 +6,39 @@ export function QuartaAula () {
     const componentsFinded = [
         {
             id: 1,
-            title: 'Vídeo',
+            title: 'Vídeo 1',
             image: youtubeimage,
-            text: "Lorem ipsum dolor sit amet."
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
             id: 2,
-            title: 'Input',
+            title: 'Vídeo 2',
             image: youtubeimage,
-            text: "Lorem ipsum dolor sit amet."
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
             id: 3,
-            title: 'Vídeo 2',
+            title: 'Vídeo 3',
             image: youtubeimage,
-            text: "Lorem ipsum dolor sit amet."
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
             id: 4,
-            title: 'Input 2',
+            title: 'Vídeo 4',
             image: youtubeimage,
-            text: "Lorem ipsum dolor sit amet."
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
             id: 5,
-            title: 'Vídeo 3',
+            title: 'Vídeo 5',
             image: youtubeimage,
-            text: "Lorem ipsum dolor sit amet."
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         },
         {
             id: 6,
-            title: 'Input 3',
+            title: 'Vídeo 6',
             image: youtubeimage,
-            text: "Lorem ipsum dolor sit amet."
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         }
     ]
 
@@ -50,7 +50,7 @@ export function QuartaAula () {
                 <li key={item.id}>
                     <img src={item.image} alt="" />
                     <h1 >{item.title}</h1>
-                    <p>{item.title}</p>
+                    <p>{item.text}</p>
                 </li>
                 )}
             </ul>

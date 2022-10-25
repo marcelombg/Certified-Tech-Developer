@@ -1,14 +1,16 @@
 .quarta-aula-component {
+        flex-basis: 100%;
 
     *{
         color: whitesmoke;
-        
+
     }
 
     .main-title {
         font-size: 32px;
         text-align: center;
         padding-bottom: 18px;
+
     }
 
     .components-finded {
@@ -27,6 +29,7 @@
 
             img {
                 width: 400px;
+
             }
         }
     }
