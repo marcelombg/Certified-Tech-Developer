@@ -23,18 +23,19 @@ export function QuartaAula () {
             text: "Lorem ipsum dolor sit amet."
         },
         {
+            id: 4,
             title: 'Input 2',
             image: youtubeimage,
             text: "Lorem ipsum dolor sit amet."
         },
         {
-            id: 4,
+            id: 5,
             title: 'Vídeo 3',
             image: youtubeimage,
             text: "Lorem ipsum dolor sit amet."
         },
         {
-            id: 5,
+            id: 6,
             title: 'Input 3',
             image: youtubeimage,
             text: "Lorem ipsum dolor sit amet."
