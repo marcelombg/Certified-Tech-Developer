@@ -2,6 +2,7 @@ import './style.scss'
 
 export function InstagramTimeLine() {
 
+    // Array com a informação de todos os Posts que vão ser replicados na Interface
     const posts = [
         {
             author: {
@@ -87,36 +88,47 @@ export function InstagramTimeLine() {
             <section className='posts'>
 
                 {
+                    // Map realizado no Array de Posts para replicar os conteúdos
                     posts.map(
 
+                        // Post é o nome da Variavel Temporária que irá receber cada item do nosso Array, iremos utiliza-la para obter o conteúdo do Post em questão e exibi-lo na interface logo abaixo :)
                         post => {
 
                             return (
 
                                 <div className='post'>
                                     <header>
+                                        {/* Utilização da Interpolação para exibirmos a Imagem do Autor do Post */}
                                         <img src={post.author.picture} />
                                         <div>
+                                            {/* Utilização da Interpolação para exibirmos o Nome do Autor do Post */}
                                             <h1>{post.author.name}</h1>
+                                            {/* Utilização da Interpolação para exibirmos a Localização do Post */}
                                             <h2>{post.location}</h2>
                                         </div>
                                     </header>
                                     <main>
+                                        {/* Utilização da Interpolação para exibirmos a Imagem do Post */}
                                         <img src={post.media} />
                                         <section className='post-infos'>
+                                            {/* Utilização da Interpolação para exibirmos a Quantidade de Likes do Post */}
                                             <span className='likeds'>Curtido por {post.likes} pessoas</span>
                                         </section>
                                         <ul className='comments'>
 
                                             {
+                                                // Map realizado no Array de Comentários que existe dentro de cada Post, com ele iremos replicar a Interface abaixo quantas vezes for necessário até exibirmos todos os comentários
                                                 post.comments.map(
 
+                                                    // Comment é o nome da Variavel Temporária que irá receber cada item do nosso Array de Comentários, iremos utiliza-la para obter o conteúdo do Comentário em questão e exibi-lo na interface logo abaixo :)
                                                     comment => {
 
                                                         return (
 
                                                             <li>
+                                                                {/* Utilização da Interpolação para exibirmos o Nome do Autor do Comentário */}
                                                                 <h1>{comment.author.name}</h1>
+                                                                {/* Utilização da Interpolação para exibirmos o Comentário */}
                                                                 <p>{comment.text}</p>
                                                             </li>
                                                         )
