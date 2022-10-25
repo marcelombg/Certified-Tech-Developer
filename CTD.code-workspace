@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../Checkpoint-Back-End-I---Equipe-08"
 		}
 	],
 	"settings": {}
