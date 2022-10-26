@@ -10,7 +10,7 @@ resource "aws_instance" "servidor-marcelo-1" {
     key_name = "key-marcelo-2"  
 }
 
-resource "aws_key_pair" "terraform" {
+resource "aws_key_pair" "terraform-marcelo-aws" {
     key_name = "key-marcelo-2"  
-    public_key = file("terraform.pub")
+    public_key = file("terraform-marcelo-aws.pub")
 }
