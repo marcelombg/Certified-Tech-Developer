@@ -2,7 +2,7 @@ import './style.scss'
 import youtubeimage from "./../../assets/images/youtube_home.png"
 import youtubelogo from "./../../assets/images/youtube-logo.png"
 import { QuintaAulaItem } from '../../components/QuintaAulaItem'
-import { QuintaAulaItem2 } from '../../components/QuintaAulaItem'
+import { QuintaAulaItem2 } from '../../components/QuintaAulaItem2'
 
 export function QuintaAula () {
 
@@ -12,7 +12,7 @@ export function QuintaAula () {
             title: 'Vídeo 1',
             image: youtubeimage,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            link: 'https://www.youtube.com/',
+            link: "https://www.youtube.com/",
             image2: youtubelogo
         },
         {
@@ -20,7 +20,7 @@ export function QuintaAula () {
             title: 'Vídeo 2',
             image: youtubeimage,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            link: 'https://www.youtube.com/',
+            link: "https://www.youtube.com/",
             image2: youtubelogo
         },
         {
@@ -28,7 +28,7 @@ export function QuintaAula () {
             title: 'Vídeo 3',
             image: youtubeimage,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            link: 'https://www.youtube.com/',
+            link: "https://www.youtube.com/",
             image2: youtubelogo
         },
         {
@@ -36,7 +36,7 @@ export function QuintaAula () {
             title: 'Vídeo 4',
             image: youtubeimage,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            link: 'https://www.youtube.com/',
+            link: "https://www.youtube.com/",
             image2: youtubelogo
         },
         {
@@ -44,7 +44,7 @@ export function QuintaAula () {
             title: 'Vídeo 5',
             image: youtubeimage,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            link: 'https://www.youtube.com/',
+            link: "https://www.youtube.com/",
             image2: youtubelogo
         },
         {
@@ -52,7 +52,7 @@ export function QuintaAula () {
             title: 'Vídeo 6',
             image: youtubeimage,
             text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-            link: 'https://www.youtube.com/',
+            link: "https://www.youtube.com/",
             image2: youtubelogo
         }
     ]
@@ -64,10 +64,8 @@ export function QuintaAula () {
                 {componentsFinded.map(item => 
                 <QuintaAulaItem key={item.id} component={item}/>
                 )}
+            <a href="https://www.youtube.com/">Link</a>
             </ul>
-            <div>
-                <QuintaAulaItem2/>
-            </div>
         </div>
     )
 }

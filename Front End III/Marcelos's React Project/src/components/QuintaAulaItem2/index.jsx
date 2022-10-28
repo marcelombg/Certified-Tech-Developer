@@ -1,10 +1,10 @@
-export function QuintaAulaItem2() {
+export function QuintaAulaItem2(props) {
 
-    console.log()
+    console.log(props)
 
     return (
-        <a href="">
-            <img src="" />
+        <a href={props.component2.link}>
+            <img src={props.component2.image2} />
         </a>
     )
 }
