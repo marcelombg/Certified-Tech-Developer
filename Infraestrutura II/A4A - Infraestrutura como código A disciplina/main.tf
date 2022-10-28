@@ -1,7 +1,5 @@
 provider "aws" {
     region = var.regiao
-    access_key = ""
-    secret_key = ""
 }
 
 #MESA AULA 4
