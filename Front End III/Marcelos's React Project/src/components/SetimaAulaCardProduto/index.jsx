@@ -1,12 +1,16 @@
-export function QuintaAulaItem(props) {
+import './style.scss'
 
-    console.log(props)
+export function SetimaAulaCardProduto(props) {
 
     return (
-        <li>
-            <img src={props.component.image}/>
-            <h1 >{props.component.title}</h1>
-            <p>{props.component.text}</p>
-        </li>
+
+        <div className="setima-aula-card-produto-component">
+            <img src={props.productData.picture} />
+            <div className="card-body">
+                <h1>{props.productData.name}</h1>
+                <span>R$ {props.productData.price},00</span>
+            </div>
+        </div>
+
     )
 }
