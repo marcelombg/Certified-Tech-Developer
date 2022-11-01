@@ -4,22 +4,7 @@ import { SetimaAulaCardProduto } from "../../components/SetimaAulaCardProduto"
 
 export function SetimaAula() {
 
-    // const [contador, setContador] = useState(0)
-    // const [temaEscuro, setTemaEscuro] = useState(false)
-
-    // function somarNumero(numero) {
-
-    //     setContador(contador + numero)
-
-    // }
-
-    // function mudarTema() {
-
-    //     setTemaEscuro(!temaEscuro)
-
-    // }
-
-    const allProducts = [
+    const [allProducts, setAllProducts] = useState([
         {
             id: 1,
             name: 'Xbox',
@@ -38,32 +23,27 @@ export function SetimaAula() {
             price: '2.000',
             picture: 'https://http2.mlstatic.com/D_NQ_NP_771705-MLA40692342174_022020-W.webp'
         }
-    ]
+    ])
 
     const newProduct = {
-        id: 4,
         name: 'Playstation 4',
         price: '2.000',
         picture: 'https://http2.mlstatic.com/D_NQ_NP_798586-MLA40076060236_122019-W.webp'
     }
 
+    function addNewProduct() {
+
+        setAllProducts([...allProducts, newProduct])
+
+    }
+
     return (
-
-        // <main className={`setima-aula-component ${temaEscuro ? 'dark-theme' : ''}`}>
-
-        //     <h1>Contador</h1>
-
-        //     <button onClick={() => mudarTema()}>Mudar tema</button>
-        //     <button onClick={() => somarNumero(2)}>Adicionar</button>
-        //     <span>Número atual: {contador}</span>
-
-        // </main>
 
         <main className="setima-aula-component">
 
             <div className="tittle-wrapper">
                 <h1>Produtos</h1>
-                <button>Adicionar novo produto</button>
+                <button onClick={addNewProduct}>Adicionar novo produto</button>
             </div>
 
             <section className='products'>

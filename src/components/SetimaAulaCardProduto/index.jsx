@@ -2,6 +2,12 @@ import './style.scss'
 
 export function SetimaAulaCardProduto(props) {
 
+    function comprarProduto() {
+
+        console.log(props.productData)
+
+    }
+
     return (
 
         <div className="setima-aula-card-produto-component">
@@ -10,6 +16,7 @@ export function SetimaAulaCardProduto(props) {
                 <h1>{props.productData.name}</h1>
                 <span>R$ {props.productData.price},00</span>
             </div>
+            <button onClick={comprarProduto}>COmprar</button>
         </div>
 
     )
