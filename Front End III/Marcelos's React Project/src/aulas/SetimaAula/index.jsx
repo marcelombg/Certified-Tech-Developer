@@ -49,7 +49,7 @@ export function SetimaAula () {
 
     function addNewProduct(){
 
-        setAllProducts( [...allProducts, newProduct] )
+        setAllProducts( [newProduct, ...allProducts] )
     
     }
 
