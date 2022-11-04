@@ -4,6 +4,10 @@ import { SetimaAulaCardProduto } from "../../components/SetimaAulaCardProduto"
 
 export function SetimaAula() {
 
+    const [nomeProduto, setNomeProduto] = useState('')
+    const [precoProduto, setPrecoProduto] = useState('')
+    const [fotoProduto, setFotoProduto] = useState('')
+    const [formularioErro, setFormularioErro] = useState(false)
     const [allProducts, setAllProducts] = useState([
         {
             id: 1,
@@ -31,9 +35,35 @@ export function SetimaAula() {
         picture: 'https://http2.mlstatic.com/D_NQ_NP_798586-MLA40076060236_122019-W.webp'
     }
 
-    function addNewProduct() {
 
-        setAllProducts([...allProducts, newProduct])
+
+    function cadastrarProduto(event) {
+
+        event.preventDefault()
+
+        const novoProdutoCadastrado = {
+            name: nomeProduto,
+            price: precoProduto,
+            picture: fotoProduto
+        }
+
+        if (nomeProduto === '' || precoProduto === '') {
+
+            setFormularioErro(true)
+
+        } else {
+
+            setFormularioErro(false)
+
+            setAllProducts([...allProducts, novoProdutoCadastrado])
+
+            setNomeProduto('')
+            precoProduto('')
+            fotoProduto('')
+
+        }
+
+        console.log(opcao)
 
     }
 
@@ -43,8 +73,36 @@ export function SetimaAula() {
 
             <div className="tittle-wrapper">
                 <h1>Produtos</h1>
-                <button onClick={addNewProduct}>Adicionar novo produto</button>
+                {/* <button onClick={addNewProduct}>Adicionar novo produto</button> */}
             </div>
+
+            <form className={formularioErro ? 'form-error' : ''} onSubmit={event => cadastrarProduto(event)}>
+
+                <div>
+                    <label htmlFor="nomeProduto">Nome</label>
+                    <input id="nomeProduto" type="text" value={nomeProduto} onChange={event => setNomeProduto(event.target.value)} />
+                </div>
+
+                <div>
+                    <label htmlFor="precoProduto">Preço</label>
+                    <input id="precoProduto" type="text" value={precoProduto} onChange={event => setPrecoProduto(event.target.value)} />
+                </div>
+
+                <div>
+                    <label htmlFor="fotoProduto">Foto</label>
+                    <input id="fotoProduto" type="text" value={fotoProduto} onChange={event => setFotoProduto(event.target.value)} />
+                </div>
+
+                <button type='submit'>Cadastrar Produto</button>
+                <button type='reset'>Limpar formulário</button>
+
+            </form>
+
+            {
+                formularioErro ? (
+                    <span>O seu formulário contem erros</span>
+                ) : null
+            }
 
             <section className='products'>
                 {
