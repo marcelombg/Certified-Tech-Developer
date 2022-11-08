@@ -1,0 +1,83 @@
+main {
+    text-align: center;
+}
+
+.form-error, .error {
+
+    background-color: red;
+    align-items: center;
+
+}
+
+.checkpoint-component, form {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    color: lightgrey;
+    font-weight: bold;
+    
+    
+
+    &>h1 {
+
+        margin-bottom: 32px;
+
+    }
+
+    &>button {
+
+        color: black;
+        padding: 4px;
+        margin-right: 12px;
+
+    }
+    
+    .form {
+
+        align-items: center;
+
+        input {
+
+            width: 460px;
+
+        }
+
+    }
+
+    .App {
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 42px;
+
+        button {
+
+            font-size: 16px;
+            background-color: rgb(105, 194, 105);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            transition: .2s ease-in-out;
+
+            &:hover {
+
+                filter: brightness(120%);
+                cursor: pointer;
+
+            }
+
+        }
+
+    }
+
+    .products, form {
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 42px;
+
+    }
+
+}

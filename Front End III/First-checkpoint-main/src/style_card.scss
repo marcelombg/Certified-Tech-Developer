@@ -1,0 +1,35 @@
+.checkpoint-card-produto-component {
+
+    background-color: #252525;
+    width: calc(32% - 12px);
+    border: 1px solid #303030;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+    width: 33,33%;
+    height: 150px;
+    object-fit: cover;
+
+    &:hover {
+
+        filter: brightness(110%);
+        cursor: pointer;
+
+    }
+
+    .card-body {
+
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        span {
+
+            color: #81c781;
+
+        }
+
+    }
+
+}
