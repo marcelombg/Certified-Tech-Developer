@@ -4,7 +4,7 @@ export function Card(props) {
 
   return (
 
-    <div className="checkpoint-card-produto-component" style={{background:props.color}}>
+    <div className="checkpoint-card-produto-component" style={{backgroundColor:props.color}}>
       <h1>{props.productData.name}</h1>
       <span>{props.productData.codigo}</span>
     </div>
