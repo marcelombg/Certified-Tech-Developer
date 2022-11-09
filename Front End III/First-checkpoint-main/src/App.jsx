@@ -4,31 +4,31 @@ import './style_app.scss'
 
 function App() {
 
-  const [nomeProduto, setNomeProduto] = useState('')
-  const [codigoCor, setCodigoCor] = useState('')
+  const [nomeCor, setNomeCor] = useState('')
+  const [listaCor, setListaCor] = useState('')
   const [formularioErro, setFormularioErro] = useState(false)
-  const [allProducts, setAllProducts] = useState([])
+  const [allCards, setAllCards] = useState([])
 
   function cadastrarCor(event) {
 
     event.preventDefault();
 
-    const novoProdutoCadastrado = {
-      name: nomeProduto,
-      codigo: codigoCor,
-
+    const novoCardCadastrado = {
+      cor: nomeCor,
+      codigo: listaCor,
+      
     }
 
-    if (codigoCor == '' || nomeProduto == '') {
+    if (listaCor == '' || nomeCor.length < 3) {
 
       setFormularioErro(true)
 
     } else {
 
       setFormularioErro(false)
-      setNomeProduto('')
-      setCodigoCor('')
-      setAllProducts([novoProdutoCadastrado, ...allProducts])
+      setNomeCor('')
+      setListaCor('')
+      setAllCards([novoCardCadastrado, ...allCards])
 
     }
   }
@@ -37,58 +37,57 @@ function App() {
 
     <main className="checkpoint-component">
 
-      <div className="tittle-wrapper">
-        
-        <h1>ADICIONAR NOVA COR</h1>
-        
-      </div>
 
       <div className="form">
 
+        <div className="adicionar-nova-cor">
+          <h1>ADICIONAR NOVA COR</h1>
+        </div>
+
         <form className={formularioErro ? 'form-error' : ''} onSubmit={event => cadastrarCor(event)}>
+          <label htmlFor="nomeCor">NOME</label>
+          <input type="text" value={nomeCor.trim()} onChange={event => setNomeCor(event.target.value)} />
 
-          <label htmlFor="nomeProduto">Nome </label>
-
-          <input type="text" value={nomeProduto} onChange={event => setNomeProduto(event.target.value)} />
-
-          <label htmlFor="codigoCor">Cor </label>
-
-          <input id="codigoCor" type="color" list="presetColors" value={codigoCor} onChange={event => setCodigoCor(event.target.value)} />
+          <label htmlFor="listaCor">COR</label>
+          <input id="listaCor" type="color" list="presetColors" value={listaCor} onChange={event => setListaCor(event.target.value)} />
 
           <datalist id="presetColors">
-
             <option value="presetColors"></option>
             <option value="presetColors"></option>
             <option value="presetColors"></option>
-
           </datalist>
 
           <button type='submit'>ADICIONAR</button>
 
         </form>
 
+        {
+          formularioErro ? (
+            <span className='error'>Por favor, verifique os dados inseridos no formulário</span>
+          ) : null
+        }
+
       </div>
 
-      {
-        formularioErro ? (
-          <span className='error'>Nenhuma cor foi escolhida</span>
-        ) : null
-      }
+      <div className="cores-favoritas">
 
-      <section className='products'>
-        {
-          allProducts.map(
-            product => {
-              return (
-                <Card
-                  productData={product}
-                  color={codigoCor}
-                />
-              )
-            }
-          )
-        }
-      </section>
+        <h1>CORES FAVORITAS</h1>
+
+        <section className='cards'>
+          {
+            allCards.map(
+              card => {
+                return (
+                  <Card
+                    cardCadastrado={card}
+                  />
+                )
+              }
+            )
+          }
+        </section>
+
+      </div>
 
     </main>
   )

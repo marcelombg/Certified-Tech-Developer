@@ -1,83 +1,125 @@
-main {
-    text-align: center;
-}
+.error {
 
-.form-error, .error {
-
-    background-color: red;
-    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FF7070;
 
 }
 
 .checkpoint-component, form {
 
     width: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
+    max-width: 100%;
+    margin: auto;
     color: lightgrey;
-    font-weight: bold;
-    
-    
+    font-weight: bold;   
 
     &>h1 {
 
         margin-bottom: 32px;
+        width: 464px;
+        height: 60px;
+        left: 32px;
+        top: 116px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 60px;
+        color: #FFFFFF;
 
     }
 
     &>button {
 
-        color: black;
-        padding: 4px;
-        margin-right: 12px;
+        width: 50%;
+        height: 40px;
+        background: #36CE7C;
+        border-radius: 12px;
+        color: #FFFFFF;
+        font-family: 'Poppins';
+        margin-left: 85%;
+
+        &:hover {
+
+            filter: brightness(120%);
+            cursor: pointer;
+
+        }
 
     }
     
     .form {
+        box-sizing: border-box;
+        border-radius: 4px;
 
-        align-items: center;
+        .form-error {
+
+            box-sizing: border-box;
+            background: #221515;
+            border: 1px solid #FF7070;
+            border-radius: 4px;
+        
+        }
+
+        label {
+
+            width: 8%;
+            height: 24px;
+            left: 32px;
+            top: 208px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+
+        }
 
         input {
+            
+            box-sizing: border-box;
+            width: 40%;
+            height: 38px;
+            left: 32px;
+            top: 232px;
+            background: #353535;
+            border-radius: 8px;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 12px;
 
-            width: 460px;
+        }
 
+        .adicionar-nova-cor {
+
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 42px;
+    
+        }
+
+        .cores-favoritas {
+
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 42px;
+ 
         }
 
     }
 
-    .tittle-wrapper {
-
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 42px;
-
-        button {
-
-            font-size: 16px;
-            background-color: rgb(105, 194, 105);
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            transition: .2s ease-in-out;
-
-            &:hover {
-
-                filter: brightness(120%);
-                cursor: pointer;
-
-            }
-
-        }
-
-    }
-
-    .products, form {
+    .cards, form {
 
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 42px;
-
+        
     }
 
 }
