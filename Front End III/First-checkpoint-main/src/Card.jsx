@@ -5,7 +5,7 @@ export function Card(props) {
   return (
 
     <div className="card-component" style={{backgroundColor:props.cardCadastrado.codigo}}>
-      <h1>{props.cardCadastrado.cor.trim()}</h1>
+      <h1>{props.cardCadastrado.cor.trim().toUpperCase()}</h1>
       <span>{props.cardCadastrado.codigo}</span>
     </div>
     
