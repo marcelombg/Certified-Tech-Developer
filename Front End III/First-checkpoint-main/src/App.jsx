@@ -46,7 +46,7 @@ function App() {
 
         <form className={formularioErro ? 'form-error' : ''} onSubmit={event => cadastrarCor(event)}>
           <label htmlFor="nomeCor">NOME</label>
-          <input type="text" value={nomeCor.trim()} onChange={event => setNomeCor(event.target.value)} />
+          <input type="text" value={nomeCor} onChange={event => setNomeCor(event.target.value)} />
 
           <label htmlFor="listaCor">COR</label>
           <input id="listaCor" type="color" list="presetColors" value={listaCor} onChange={event => setListaCor(event.target.value)} />
