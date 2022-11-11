@@ -15,7 +15,8 @@ export function DecimaTerceiraAula () {
 
     function contar(){
         if (contador.length > 0) {
-            setTimeout(() => {alert('Componente atualizado')}, 5000); 
+            setContador('')
+            setTimeout(() => {alert('Componente atualizado')}, 5000);
         }
 
     }
@@ -23,6 +24,7 @@ export function DecimaTerceiraAula () {
     useEffect(() => 
     {
         contar()
+        cancelarPedido()
     }, []
     )
 
