@@ -10,6 +10,12 @@
 
 }
 
+input, button {
+
+  color: black;
+
+}
+
 body {
 
   background-color: #202020;
