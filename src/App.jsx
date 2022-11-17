@@ -5,11 +5,13 @@ import { TerceiraAula } from './lessons/TerceiraAula'
 import { DHGames } from './pages/DHGames'
 import { SetimaAula } from './lessons/SetimaAula'
 import { DecimaTerceiraAula } from './lessons/DecimaTerceiraAula'
+import { DecimaQuartaAula } from './lessons/DecimaQuartaAula'
+import { DecimaQuintaAula } from './lessons/DecimaQuintaAula'
 
 function App() {
 
   return (
-    <DecimaTerceiraAula />
+    <DecimaQuintaAula />
   )
 
 }
