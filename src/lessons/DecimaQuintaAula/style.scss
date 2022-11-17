@@ -63,4 +63,17 @@
 
     }
 
+    button {
+
+        transition: .2s ease-in-out;
+
+        &:hover {
+
+            cursor: pointer;
+            padding: 14px 36px;
+
+        }
+
+    }
+
 }
