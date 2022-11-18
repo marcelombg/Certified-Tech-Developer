@@ -48,6 +48,13 @@
             font-size: 16px;
             font-weight: bold;
             align-self: flex-end;
+            opacity: 1;
+
+            &:hover {
+
+                box-shadow: 0 0 20px rgb(77, 200, 89);
+
+            }
 
         }
 
@@ -66,11 +73,12 @@
     button {
 
         transition: .2s ease-in-out;
+        opacity: .4;
 
         &:hover {
 
             cursor: pointer;
-            padding: 14px 36px;
+            opacity: 1;
 
         }
 

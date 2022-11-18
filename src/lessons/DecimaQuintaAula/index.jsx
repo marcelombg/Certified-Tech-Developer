@@ -4,12 +4,12 @@ import './style.scss'
 
 export function DecimaQuintaAula() {
 
-    const [locations, setLocations] = useState([1, 0, 2])
-    const [cep, setCep] = useState(0)
+    const [locations, setLocations] = useState([])
+    const [cep, setCep] = useState('')
 
     function searchCep(cepRecieved) {
 
-
+        setCep(cepRecieved)
 
     }
 
@@ -23,7 +23,11 @@ export function DecimaQuintaAula() {
 
                 <div>
                     <label htmlFor="">Cep</label>
-                    <input type="number" value={cep} onChange={event => searchCep(event.target.value)} />
+                    <input
+                        type="number"
+                        value={cep}
+                        onChange={event => searchCep(event.target.value)}
+                    />
                 </div>
 
                 <button>Cadastrar</button>
@@ -34,9 +38,10 @@ export function DecimaQuintaAula() {
 
                 {
                     locations.map(
-                        location => {
+                        (location, index) => {
                             return (
                                 <DecimaQuintaAulaItem
+                                    key={index}
                                     data={location}
                                 />
                             )

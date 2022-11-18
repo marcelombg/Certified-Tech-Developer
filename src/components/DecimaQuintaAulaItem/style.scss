@@ -9,6 +9,18 @@
     background-color: #303030;
     border-radius: 12px;
 
+    address {
+
+        opacity: .8;
+
+    }
+
+    small {
+
+        opacity: .6;
+
+    }
+
     button {
 
         width: fit-content;
@@ -20,6 +32,12 @@
         background-color: rgb(200, 77, 102);
         font-size: 16px;
         font-weight: bold;
+
+        &:hover {
+
+            opacity: .8;
+
+        }
 
     }
 
