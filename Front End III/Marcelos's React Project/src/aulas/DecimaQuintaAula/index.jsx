@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { DecimaQuintaAulaItem } from '../../components/DecimaQuintaAulaItem'
 import './style.scss'
 
+
 export function DecimaQuintaAula() {
 
     const [locations, setLocations] = useState([])
@@ -11,9 +12,38 @@ export function DecimaQuintaAula() {
 
         setCep(cepRecieved)
 
+        if (cepRecieved.length === 8) {
+
+            fetch(`https://viacep.com.br/ws/${cepRecieved}/json/`).then(
+                response => {
+                    response.json().then(
+                        address => {
+
+                            if (address.erro !== undefined) {
+                                //Deu erro
+                            } else {
+                                //Deu sucesso
+                                setLocations([...locations, address])
+                            }
+                        }
+                    )
+
+                }
+
+            )
+
+        }
+    }
+    
+    function deleteLocation(currentLocation) {
+
+        console.log(currentLocation)
+
+        setLocations(locations.filter((currentLocation) => currentLocation !== currentLocation))
+
     }
 
-    return(
+    return (
 
         <div className="decima-quarta-aula-component">
 
@@ -22,7 +52,7 @@ export function DecimaQuintaAula() {
                 <h1>Cadastrar endereços</h1>
 
                 <div>
-                    <label htmlFor="">Cep</label>
+                    <label>Cep</label>
                     <input
                         type="number"
                         value={cep}
@@ -30,7 +60,7 @@ export function DecimaQuintaAula() {
                     />
                 </div>
 
-                <button>Cadastrar</button>
+                <button >Cadastrar</button>
 
             </form>
 
@@ -43,6 +73,7 @@ export function DecimaQuintaAula() {
                                 <DecimaQuintaAulaItem
                                     key={index}
                                     data={location}
+                                    onDeleteLocation={currentLocation => deleteLocation(currentLocation)}
                                 />
                             )
                         }
