@@ -5,12 +5,13 @@
 // import { QuintaAula } from './aulas/QuintaAula'
 // import { SetimaAula } from './aulas/SetimaAula'
 // import { OitavaAula } from "./aulas/OitavaAula"
-import { DecimaTerceiraAula } from "./aulas/DecimaTerceiraAula"
+// import { DecimaTerceiraAula } from "./aulas/DecimaTerceiraAula"
+import { DecimaQuartaAula } from "./aulas/DecimaQuartaAula"
 
 function App() {
 
   return (
-    <DecimaTerceiraAula/>
+    <DecimaQuartaAula/>
   )
 
 }
