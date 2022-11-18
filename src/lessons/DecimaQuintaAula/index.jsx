@@ -1,5 +1,8 @@
+import { useEffect } from 'react'
 import { useState } from 'react'
+
 import { DecimaQuintaAulaItem } from '../../components/DecimaQuintaAulaItem'
+
 import './style.scss'
 
 export function DecimaQuintaAula() {
@@ -10,6 +13,38 @@ export function DecimaQuintaAula() {
     function searchCep(cepRecieved) {
 
         setCep(cepRecieved)
+
+        if(cepRecieved.length === 8) {
+
+            fetch(`https://viacep.com.br/ws/${cepRecieved}/json/`).then(
+                response => {
+                    response.json().then(
+                        address => {
+
+                            if(address.erro !== undefined) {
+
+                                // Deu erro
+
+                            } else {
+
+                                // Deu Sucesso
+                                setLocations([...locations, address])
+
+                            }
+                        }
+                    )
+                }
+            )
+
+        }
+
+    }
+
+
+
+    function deleteLocation(currentLocation) {
+
+        console.log(currentLocation)
 
     }
 
@@ -22,7 +57,7 @@ export function DecimaQuintaAula() {
                 <h1>Cadastrar endereços</h1>
 
                 <div>
-                    <label htmlFor="">Cep</label>
+                    <label>Cep</label>
                     <input
                         type="number"
                         value={cep}
@@ -38,14 +73,13 @@ export function DecimaQuintaAula() {
 
                 {
                     locations.map(
-                        (location, index) => {
-                            return (
-                                <DecimaQuintaAulaItem
-                                    key={index}
-                                    data={location}
-                                />
-                            )
-                        }
+                        (location, index) => (
+                            <DecimaQuintaAulaItem
+                                key={index}
+                                data={location}
+                                onDeleteLocation={currentLocation => deleteLocation(currentLocation)}
+                            />
+                        )
                     )
                 }
 
