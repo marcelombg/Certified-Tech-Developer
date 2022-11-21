@@ -7,6 +7,7 @@ export function DecimaQuintaAula() {
 
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
+    const [formularioErro, setFormularioErro] = useState(false)
 
     function searchCep(cepRecieved) {
 
@@ -21,9 +22,13 @@ export function DecimaQuintaAula() {
 
                             if (address.erro !== undefined) {
                                 //Deu erro
+                                setFormularioErro(true)
+
                             } else {
                                 //Deu sucesso
+                                setFormularioErro(false)
                                 setLocations([...locations, address])
+                                setCep('')
                             }
                         }
                     )
@@ -34,20 +39,23 @@ export function DecimaQuintaAula() {
 
         }
     }
-    
+
     function deleteLocation(currentLocation) {
 
-        console.log(currentLocation)
+        console.log(currentLocation.cep)
 
-        setLocations(locations.filter((currentLocation) => currentLocation !== currentLocation))
-
+        locations.map((location) => {
+            if (location.cep === currentLocation.cep) {
+                setLocations(locations.filter((currentLocation) => location.cep !== currentLocation.cep))
+            }
+        })
     }
 
     return (
 
         <div className="decima-quarta-aula-component">
 
-            <form>
+            <form className={formularioErro ? 'form-error' : ''} onSubmit={event => addNewCEP(event)}>
 
                 <h1>Cadastrar endereços</h1>
 
@@ -60,7 +68,13 @@ export function DecimaQuintaAula() {
                     />
                 </div>
 
-                <button >Cadastrar</button>
+                {
+                    formularioErro ? (
+                        <span>O seu formulario contém erros</span>
+                    ) : null
+                }
+
+                <button type='submit'>Cadastrar</button>
 
             </form>
 

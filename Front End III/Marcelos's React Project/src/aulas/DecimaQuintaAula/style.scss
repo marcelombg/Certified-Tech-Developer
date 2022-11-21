@@ -12,6 +12,10 @@
         display: flex;
         flex-direction: column;
 
+        span {
+            color: red;
+        }
+
         h1 {
 
             color: white;
@@ -41,6 +45,8 @@
                 color: white;
                 
             }
+
+            
 
         }
 
