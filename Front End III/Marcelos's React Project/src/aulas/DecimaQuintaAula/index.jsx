@@ -8,6 +8,8 @@ export function DecimaQuintaAula() {
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
     const [formularioErro, setFormularioErro] = useState(false)
+    const [botao, setBotao] = useState(false)
+   
 
     function searchCep(cepRecieved) {
 
@@ -55,7 +57,7 @@ export function DecimaQuintaAula() {
 
         <div className="decima-quarta-aula-component">
 
-            <form className={formularioErro ? 'form-error' : ''} onSubmit={event => addNewCEP(event)}>
+            <form className={formularioErro ? 'form-error' : ''}>
 
                 <h1>Cadastrar endereços</h1>
 
@@ -72,10 +74,7 @@ export function DecimaQuintaAula() {
                     formularioErro ? (
                         <span>O seu formulario contém erros</span>
                     ) : null
-                }
-
-                <button type='submit'>Cadastrar</button>
-
+                }            
             </form>
 
             <section className="locations">
