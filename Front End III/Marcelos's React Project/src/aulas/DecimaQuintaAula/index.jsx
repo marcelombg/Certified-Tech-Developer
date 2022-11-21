@@ -8,37 +8,42 @@ export function DecimaQuintaAula() {
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
     const [formularioErro, setFormularioErro] = useState(false)
-    const [botao, setBotao] = useState(false)
-   
+    const [cepErro, setCepErro] = useState(false)
 
-    function searchCep(cepRecieved) {
 
-        setCep(cepRecieved)
+    function searchCep(event) {
 
-        if (cepRecieved.length === 8) {
+        event.preventDefault();
+             
+        if (cep.length > 7 || cep.length < 9) {
 
-            fetch(`https://viacep.com.br/ws/${cepRecieved}/json/`).then(
-                response => {
-                    response.json().then(
-                        address => {
+            setFormularioErro(true)
 
-                            if (address.erro !== undefined) {
-                                //Deu erro
-                                setFormularioErro(true)
+            if(cep.length == 8) {
 
-                            } else {
-                                //Deu sucesso
-                                setFormularioErro(false)
-                                setLocations([...locations, address])
-                                setCep('')
+                setFormularioErro(false)
+
+                fetch(`https://viacep.com.br/ws/${cep}/json/`).then(
+                    response => {
+                        response.json().then(
+                            address => {
+    
+                                if (address.erro !== undefined) {
+                                    //Deu erro
+                                    setCepErro(true)
+    
+                                } else {
+                                    //Deu sucesso
+                                    setFormularioErro(false)
+                                    setCepErro(false)
+                                    setLocations([...locations, address])
+                                    setCep('')
+                                }
                             }
-                        }
-                    )
-
-                }
-
-            )
-
+                        )
+                    }
+                )
+            }            
         }
     }
 
@@ -55,30 +60,38 @@ export function DecimaQuintaAula() {
 
     return (
 
-        <div className="decima-quarta-aula-component">
+        <div className='decima-quarta-aula-component'>
 
-            <form className={formularioErro ? 'form-error' : ''}>
+            <form name={cepErro ? 'cep-form-error' : ''} className={formularioErro ? 'form-error' : ''} onSubmit={event => searchCep(event)}>
 
                 <h1>Cadastrar endereços</h1>
 
                 <div>
                     <label>Cep</label>
                     <input
-                        type="number"
+                        type='number'
                         value={cep}
-                        onChange={event => searchCep(event.target.value)}
+                        onChange={(event) => setCep(event.target.value)}
                     />
                 </div>
 
                 {
                     formularioErro ? (
-                        <span>O seu formulario contém erros</span>
+                        <span>O CEP não possui 8 caracteres</span>
                     ) : null
-                }            
+                }
+                {
+                    cepErro ? (
+                        <span>CEP inexistente</span>
+                    ) : null
+                }
+
+                <button type='submit'>Cadastrar</button>
+
             </form>
 
-            <section className="locations">
-
+            <section className='locations'>
+                
                 {
                     locations.map(
                         (location, index) => {
