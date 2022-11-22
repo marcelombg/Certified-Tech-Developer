@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { DecimaQuintaAulaItem } from '../../components/DecimaQuintaAulaItem'
 import './style.scss'
 
-
 export function DecimaQuintaAula() {
 
     const [locations, setLocations] = useState([])
@@ -15,13 +14,9 @@ export function DecimaQuintaAula() {
 
         event.preventDefault();
              
-        if (cep.length > 7 || cep.length < 9) {
-
-            setFormularioErro(true)
+        if (cep.length > 7 && cep.length < 9) {
 
             if(cep.length == 8) {
-
-                setFormularioErro(false)
 
                 fetch(`https://viacep.com.br/ws/${cep}/json/`).then(
                     response => {
@@ -31,7 +26,9 @@ export function DecimaQuintaAula() {
                                 if (address.erro !== undefined) {
                                     //Deu erro
                                     setCepErro(true)
-    
+                                    setFormularioErro(false)
+                                    setCep('')
+
                                 } else {
                                     //Deu sucesso
                                     setFormularioErro(false)
@@ -43,7 +40,11 @@ export function DecimaQuintaAula() {
                         )
                     }
                 )
-            }            
+            } 
+        } else {
+            setFormularioErro(true)
+            setCepErro(false)
+            setCep('')
         }
     }
 
