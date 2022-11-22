@@ -13,6 +13,7 @@ import { DecimaTerceiraAula } from './lessons/DecimaTerceiraAula'
 import { DecimaQuartaAula } from './lessons/DecimaQuartaAula'
 import { DecimaQuintaAula } from './lessons/DecimaQuintaAula'
 import { MainLayout } from "./components/MainLayout"
+import { ToDo } from "./pages/ToDo"
 
 function App() {
 
@@ -28,8 +29,12 @@ function App() {
         {
           path: 'decima-quinta-aula',
           element: <DecimaQuintaAula />
-        },
+        }
       ]
+    },
+    {
+      path: 'to-do',
+      element: <ToDo />
     }
   ])
 
