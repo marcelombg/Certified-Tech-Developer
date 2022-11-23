@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
+import { Task } from '../../components/Task'
+import { apiUrl } from '../../api'
 import './style.scss'
 
 export function ToDo() {
 
-    const apiUrl = 'https://ctd-fe2-todo-v2.herokuapp.com/v1'
     const [authToken, setAuthToken] = useState('')
     const [tasks, setTasks] = useState([])
     const [taskName, setTaskName] = useState('')
@@ -35,6 +36,7 @@ export function ToDo() {
 
                     response.json().then(
                         data => {
+                            localStorage.setItem('authToken', data.jwt)
                             setAuthToken(data.jwt)
                         }
                     )
@@ -133,41 +135,44 @@ export function ToDo() {
 
 
 
-    function deleteTask(id) {
+    function deleteTaskFromList(id) {
 
-        const requestHeaders = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': authToken
-        }
+        setTasks(
 
-        const requestConfig = {
-            method: 'DELETE',
-            headers: requestHeaders
-        }
+            tasks.filter(
+                task => {
 
-        fetch(`${apiUrl}/tasks/${id}`, requestConfig).then(
-            response => {
-                response.json().then(
-                    data => {
-                        setTasks(
+                    if(task.id !== id) {
 
-                            tasks.filter(
-                                task => {
+                        return task
 
-                                    if(task.id !== id) {
-
-                                        return task
-
-                                    }
-
-                                }
-                            )
-
-                        )
                     }
-                )
-            }
+
+                }
+            )
+
+        )
+
+    }
+
+
+
+    function updateTaskFromList(taskUpdated) {
+
+        setTasks(
+            tasks.map(
+                task => {
+
+                    if(task.id === taskUpdated.id) {
+
+                        return taskUpdated
+
+                    }
+
+                    return task
+
+                }
+            )
         )
 
     }
@@ -203,10 +208,12 @@ export function ToDo() {
 
                         tasks.map(
                             task => (
-                                <div key={task.id}>
-                                    <h1>{task.description}</h1>
-                                    <button onClick={() => deleteTask(task.id)}>Deletar</button>
-                                </div>
+                                <Task
+                                    key={task.id}
+                                    task={task}
+                                    onDeleteTask={id => deleteTaskFromList(id)}
+                                    onUpdateTask={task => updateTaskFromList(task)}
+                                />
                             )
                         )
 
