@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './style.scss'
 import { OitavaAulaItem } from "../../components/OitavaAulaItem"
+import { useParams } from 'react-router-dom'
 
 export function OitavaAula () {
 
+    const { id } = useParams
     const [nomeProduto, setNomeProduto] = useState('')
     const [precoProduto, setPrecoProduto] = useState('')
     const [fotoProduto, setFotoProduto] = useState('')

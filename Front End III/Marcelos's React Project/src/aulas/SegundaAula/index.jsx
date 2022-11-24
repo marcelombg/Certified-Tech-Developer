@@ -1,6 +1,10 @@
+import { useParams } from 'react-router-dom'
 import './style.scss'
 
 export function SegundaAula () {
+
+    const { id } = useParams
+
     return (
     <main>
         <div className='sino'>

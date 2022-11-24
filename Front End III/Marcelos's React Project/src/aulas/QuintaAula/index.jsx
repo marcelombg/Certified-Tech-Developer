@@ -3,9 +3,11 @@ import youtubeimage from "./../../assets/images/youtube_home.png"
 import youtubelogo from "./../../assets/images/youtube-logo.png"
 import { QuintaAulaItem } from '../../components/QuintaAulaItem'
 import { QuintaAulaItem2 } from '../../components/QuintaAulaItem2'
+import { useParams } from 'react-router-dom'
 
 export function QuintaAula () {
 
+    const { id } = useParams
     const componentsFinded = [
         {
             id: 1,

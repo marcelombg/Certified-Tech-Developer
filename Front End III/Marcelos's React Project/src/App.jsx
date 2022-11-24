@@ -20,7 +20,7 @@ function App() {
 
   const appRouter = createBrowserRouter([
     {
-      path: 'home',
+      path: '',
       element: <MainLayout/>,
       children: [
         {
@@ -28,39 +28,39 @@ function App() {
           element: <Login/>
         },
         {
-          path:'segundaaula',
+          path:'segundaaula/:id',
           element: <SegundaAula/>
         },
         {
-          path:'terceiraaula',
+          path:'terceiraaula/:id',
           element: <TerceiraAula/>
         },
         {
-          path:'quartaaula',
+          path:'quartaaula/:id',
           element: <QuartaAula/>
         },
         {
-          path:'quintaaula',
+          path:'quintaaula/:id',
           element: <QuintaAula/>
         },
         {
-          path:'setimaaula',
+          path:'setimaaula/:id',
           element: <SetimaAula/>
         },
         {
-          path:'oitavaaula',
+          path:'oitavaaula/:id',
           element: <OitavaAula/>
         },
         {
-          path:'decimaterceiraaula',
+          path:'decimaterceiraaula/:id',
           element: <DecimaTerceiraAula/>
         },
         {
-          path:'decimaquartaaula',
+          path:'decimaquartaaula/:id',
           element: <DecimaQuartaAula/>
         },
         {
-          path:'decimaquintaaula',
+          path:'decimaquintaaula/:id',
           element: <DecimaQuintaAula/>
         }
       ]

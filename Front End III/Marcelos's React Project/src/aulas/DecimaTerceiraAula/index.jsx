@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import './style.scss'
+import { useParams } from 'react-router-dom'
 
 export function DecimaTerceiraAula () {
 
     const [texto, setTexto] = useState('')
     const [botao, setBotao] = useState(false)
+    const { id } = useParams()
 
     function cancelarPedido() {
         if(setBotao){

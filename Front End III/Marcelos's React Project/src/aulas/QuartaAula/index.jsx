@@ -1,8 +1,10 @@
 import './style.scss'
 import youtubeimage from "./../../assets/images/youtube_home.png"
+import { useParams } from 'react-router-dom'
 
 export function QuartaAula () {
-
+    
+    const { id } = useParams
     const componentsFinded = [
         {
             id: 1,

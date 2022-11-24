@@ -1,8 +1,10 @@
 import './style.scss'
 import gif1 from './../../assets/images/giphy5.gif'
+import { useParams } from 'react-router-dom'
 
 export function TerceiraAula () {
-
+    
+    const { id } = useParams
     const components = [
         {
             name: 'Component Card 1',

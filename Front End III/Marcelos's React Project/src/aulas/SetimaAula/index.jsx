@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './style.scss'
 import { SetimaAulaCardProduto } from "../../components/SetimaAulaCardProduto"
+import { useParams } from 'react-router-dom'
 
 export function SetimaAula () {
 
+    const { id } = useParams
     // const [contador, setContador] = useState(0)
     // const [temaEscuro, setTemaEscuro] = useState(false)
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { DecimaQuintaAulaItem } from '../../components/DecimaQuintaAulaItem'
 import './style.scss'
 
@@ -8,6 +9,7 @@ export function DecimaQuintaAula() {
     const [cep, setCep] = useState('')
     const [formularioErro, setFormularioErro] = useState(false)
     const [cepErro, setCepErro] = useState(false)
+    const { id } = useParams()
 
 
     function searchCep(event) {
