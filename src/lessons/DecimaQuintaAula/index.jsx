@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { DecimaQuintaAulaItem } from '../../components/DecimaQuintaAulaItem'
 
@@ -10,6 +10,14 @@ export function DecimaQuintaAula() {
 
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
+
+    const { id } = useParams()
+
+    useEffect(() => {
+
+        // request baseada no Id
+
+    }, [])
 
     function searchCep(cepRecieved) {
 
@@ -54,6 +62,8 @@ export function DecimaQuintaAula() {
         <div className="decima-quarta-aula-component">
 
             <form>
+
+                <h1>O Id passado é {id}</h1>
 
                 <h1>Cadastrar endereços</h1>
 

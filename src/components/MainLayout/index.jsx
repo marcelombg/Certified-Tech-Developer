@@ -4,6 +4,8 @@ import './style.scss'
 
 export function MainLayout() {
 
+    const items = [{ id: 1, name: 'Reportagem 1' }, { id: 2, name: 'Reportagem 2' }]
+
     return (
         <div className="main-layout-component">
 
@@ -26,6 +28,23 @@ export function MainLayout() {
                     </li>
 
                 </ul>
+
+                {
+
+                    items.map(
+                        item => {
+                            return (
+                                <>
+                                    <Link to={`decima-quinta-aula/${item.id}`}>{item.name}</Link>
+                                    <br />
+                                </>
+                            )
+
+                        }
+
+                    )
+
+                }
 
             </header>
 
