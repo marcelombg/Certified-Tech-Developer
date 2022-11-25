@@ -2,7 +2,7 @@ import "@testing-library/jest-dom"
 import { render, fireEvent } from "@testing-library/react"
 import { describe, expect } from "vitest"
 
-import { DecimaQuintaAula } from "./lessons/DecimaQuintaAula"
+import { DecimaQuintaAula } from './lessons/DecimaQuintaAula'
 
 describe('DecimaQuintaAula component', () => {
 
@@ -25,7 +25,7 @@ describe('DecimaQuintaAula component', () => {
 
         setTimeout(() => {
 
-            expect(getByText('Cep: 01315000')).toBeInTheDocument()
+            expect(getByText('Cep: 01315-000')).toBeInTheDocument()
 
         }, 2000)
 

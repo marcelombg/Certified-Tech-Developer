@@ -27,7 +27,7 @@ function App() {
           element: <DecimaQuartaAula />
         },
         {
-          path: 'decima-quinta-aula/:id',
+          path: 'decima-quinta-aula',
           element: <DecimaQuintaAula />
         }
       ]

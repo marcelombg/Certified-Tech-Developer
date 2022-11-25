@@ -11,7 +11,7 @@ export function DecimaQuintaAula() {
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
 
-    const { id } = useParams()
+    // const { id } = useParams()
 
     useEffect(() => {
 
@@ -62,8 +62,6 @@ export function DecimaQuintaAula() {
         <div className="decima-quarta-aula-component">
 
             <form>
-
-                <h1>O Id passado é {id}</h1>
 
                 <h1>Cadastrar endereços</h1>
 
