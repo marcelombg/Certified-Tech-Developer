@@ -72,11 +72,14 @@ export function DecimaQuintaAula() {
                     <input
                         type="number"
                         value={cep}
+                        aria-label="cep"
                         onChange={event => searchCep(event.target.value)}
                     />
                 </div>
 
-                <button>Cadastrar</button>
+                <button
+                    aria-label="submit-button"
+                >Cadastrar</button>
 
             </form>
 
