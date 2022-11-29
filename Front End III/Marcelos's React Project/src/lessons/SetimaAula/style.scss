@@ -1,6 +1,6 @@
-.light-theme {
+.dark-theme {
 
-    background-color: lightslategray;
+    background-color: red;
 
 }
 
@@ -9,8 +9,6 @@
     width: 100%;
     max-width: 1200px;
     margin: 50px auto;
-    color: lightgrey;
-    font-weight: bold;
 
     &>h1 {
 
@@ -23,6 +21,22 @@
         color: black;
         padding: 4px;
         margin-right: 12px;
+
+    }
+
+    .form-error {
+
+        background-color: red;
+
+    }
+
+    form {
+
+        input {
+
+            color: black;
+
+        }
 
     }
 
@@ -55,7 +69,7 @@
     .products {
 
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         flex-wrap: wrap;
         gap: 42px;
 

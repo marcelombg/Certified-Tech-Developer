@@ -1,75 +1,79 @@
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
+  RouterProvider
+} from "react-router-dom"
 
-import { TerceiraAula } from './aulas/TerceiraAula'
-import { SegundaAula } from './aulas/SegundaAula'
-import { Login } from './pages/Login'
-import { QuartaAula } from './aulas/QuartaAula'
-import { QuintaAula } from './aulas/QuintaAula'
-import { SetimaAula } from './aulas/SetimaAula'
-import { OitavaAula } from "./aulas/OitavaAula"
-import { DecimaTerceiraAula } from "./aulas/DecimaTerceiraAula"
-import { DecimaQuartaAula } from "./aulas/DecimaQuartaAula"
-import { DecimaQuintaAula } from "./aulas/DecimaQuintaAula"
-import { MainLayout } from "./components/MainLayout";
+import { InstagramTimeLine } from './challenges/InstagramTimeLine'
+import { QuartaAula } from './lessons/QuartaAula'
+import { QuintaAula } from './lessons/QuintaAula'
+import { SegundaAula } from "./lessons/SegundaAula"
+import { TerceiraAula } from './lessons/TerceiraAula'
+import { DHGames } from './pages/DHGames'
+import { SetimaAula } from './lessons/SetimaAula'
+import { DecimaTerceiraAula } from './lessons/DecimaTerceiraAula'
+import { DecimaQuartaAula } from './lessons/DecimaQuartaAula'
+import { DecimaQuintaAula } from './lessons/DecimaQuintaAula'
+import { MainLayout } from "./components/MainLayout"
+import { ToDo } from "./pages/ToDo"
+
+import { ThemeProvider } from "./hooks/useTheme"
+import { Configurations } from "./pages/Configurations"
 
 function App() {
 
   const appRouter = createBrowserRouter([
     {
       path: '',
-      element: <MainLayout/>,
+      element: <MainLayout />,
       children: [
         {
-          path:'login',
-          element: <Login/>
+          path: 'segunda-aula',
+          element: <SegundaAula />
         },
         {
-          path:'segundaaula/:id',
-          element: <SegundaAula/>
+          path: 'terceira-aula',
+          element: <TerceiraAula />
         },
         {
-          path:'terceiraaula/:id',
-          element: <TerceiraAula/>
+          path: 'quarta-aula',
+          element: <QuartaAula />
         },
         {
-          path:'quartaaula/:id',
-          element: <QuartaAula/>
+          path: 'quinta-aula',
+          element: <QuintaAula />
         },
         {
-          path:'quintaaula/:id',
-          element: <QuintaAula/>
+          path: 'setima-aula',
+          element: <SetimaAula />
         },
         {
-          path:'setimaaula/:id',
-          element: <SetimaAula/>
+          path: 'decima-terceira-aula',
+          element: <DecimaTerceiraAula />
         },
         {
-          path:'oitavaaula/:id',
-          element: <OitavaAula/>
+          path: 'decima-quarta-aula',
+          element: <DecimaQuartaAula />
         },
         {
-          path:'decimaterceiraaula/:id',
-          element: <DecimaTerceiraAula/>
+          path: 'decima-quinta-aula',
+          element: <DecimaQuintaAula />
         },
         {
-          path:'decimaquartaaula/:id',
-          element: <DecimaQuartaAula/>
+          path: 'configurations',
+          element: <Configurations />
         },
         {
-          path:'decimaquintaaula/:id',
-          element: <DecimaQuintaAula/>
+          path: 'to-do',
+          element: <ToDo />
         }
       ]
     }
   ])
 
   return (
-
-    <RouterProvider router={appRouter}/>
+    <ThemeProvider>
+      <RouterProvider router={appRouter} />
+    </ThemeProvider>
   )
 
 }

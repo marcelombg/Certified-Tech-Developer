@@ -1,5 +1,4 @@
-import './style.scss'
-
 export function Login() {
-    return (    <h1>Eu sou o componente de Login</h1>)
+    let title = 'Teste'
+    return (<h1 className="">{title}</h1>)
 }

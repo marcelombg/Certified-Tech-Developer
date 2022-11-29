@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { apiUrl } from './../../api'
+
 import './style.scss'
 
 export function Task(props) {

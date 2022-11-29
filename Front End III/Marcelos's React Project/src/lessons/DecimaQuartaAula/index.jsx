@@ -1,11 +1,8 @@
 import { useState } from "react"
-import { useParams } from 'react-router-dom'
 import { DecimaQuartaAulaItem } from "../../components/DecimaQuartaAulaItem"
-import './style.scss'
 
 export function DecimaQuartaAula() {
 
-    const { id } = useParams()
     const registers = [
         { id: 1, title: 'Primeiro registro' }
     ]

@@ -1,78 +1,108 @@
-body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
+.main-layout-component {
 
-}
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+    'header header'
+    'aside  main'
+    ;
+    gap: 12px;
 
-div {
-  width: 100%;
-  margin: auto;
+    // Estilização para o Modo Dark
+    &.dark {
 
-  h1 {
-    float: left;
-    padding: 10px 0;
-  }
-  
-  nav {
-    float: left;
-  
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+        .main-layout-component-header {
+
+            background-color: #404040;
+
+        }
+
+        .main-layout-component-aside {
+
+            background-color: #404040;
+
+        }
+
+        .main-layout-component-main {
+
+            background-color: #505050;
+
+        }
 
     }
-  
-    li {
-      display: inline-block;
-      margin-left: 70px;
-      padding-top: 25px;
-      position: relative;
-    
+
+    // Estilização para o Modo Light
+    &.light {
+
+        * {
+
+            color: black;
+
+        }
+
+        .main-layout-component-header {
+
+            background-color: #e3e3e3;
+
+        }
+
+        .main-layout-component-aside {
+
+            background-color: #e3e3e3;
+
+        }
+
+        .main-layout-component-main {
+
+            background-color: #d7d7d7;
+
+        }
+
     }
-  
-    a {
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 10px;
-  
-      :hover {
-        color: black;
-      }
-  
-      ::before{
-        content: '';
-        display: block;
-        height: 5px;
-        width: 100%;
-        background-color: #444;
-        position: absolute;
-        top: 0;
-        width: 0%;
-        transition: all ease-in-out 250ms;
-      }
-  
-      :hover::before{
-        width: 100%;
-      }
+
+    .main-layout-component-header {
+
+        padding: 42px;
+        grid-area: header;
+
     }
-  }
+
+    .main-layout-component-aside {
+
+        grid-area: aside;
+        margin-left: 12px;
+        padding: 42px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+
+        ul {
+
+            list-style: none;
+            padding: 0;
+
+            a {
+
+                text-decoration: none;
+                opacity: .8;
+
+            }
+
+        }
+
+    }
+
+    .main-layout-component-main {
+
+        min-height: calc(100vh - 132px - 24px);
+        padding: 42px;
+        grid-area: main;
+        border-radius: 12px;
+        margin-right: 12px;
+        margin-bottom: 12px;
+
+    }
+
 }
-
-header {
-  background-color: gray;
-  
-  ::after {
-
-    content: '';
-    display: table;
-    clear: both;
-  
-  }
-
-}
-
-
-
