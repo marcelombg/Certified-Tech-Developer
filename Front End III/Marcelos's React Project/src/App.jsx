@@ -15,7 +15,6 @@ import { DecimaQuartaAula } from './lessons/DecimaQuartaAula'
 import { DecimaQuintaAula } from './lessons/DecimaQuintaAula'
 import { MainLayout } from "./components/MainLayout"
 import { ToDo } from "./pages/ToDo"
-
 import { ThemeProvider } from "./hooks/useTheme"
 import { Configurations } from "./pages/Configurations"
 
