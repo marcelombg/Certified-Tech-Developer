@@ -1,0 +1,53 @@
+.games-section-vertical-item-component {
+
+    background-color: #151515;
+    height: 167px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &.item-card {
+
+        width: 300px;
+
+    }
+
+    .game-picture {
+
+        width: 292px;
+        object-fit: cover;
+
+    }
+
+    .infos {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+
+        .name {
+
+            font-size: 24px;
+
+        }
+
+        .plataforms {
+
+
+
+        }
+
+        .categories {
+
+            a {
+
+
+
+            }
+
+        }
+
+    }
+
+}

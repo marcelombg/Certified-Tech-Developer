@@ -1,0 +1,32 @@
+.dh-games-component {
+
+    .dh-games-main-content {
+
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .games-section {
+
+            font-size: 36px;
+            opacity: .8;
+
+            .games-section-title {
+
+                margin-bottom: 24px;
+
+            }
+
+            .games {
+
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+            }
+
+        }
+
+    }
+
+}
