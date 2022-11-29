@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Task } from '../../components/Task'
 import { apiUrl } from '../../api'
 import './style.scss'
+import { useLanguage } from '../../hooks/useLanguage'
+import { contents } from '../../assets/translate/contents'
 
 export function ToDo() {
 
@@ -9,6 +11,8 @@ export function ToDo() {
     const [tasks, setTasks] = useState([])
     const [taskName, setTaskName] = useState('')
     const [taskNameError, setTaskNameError] = useState(false)
+
+    const { currentLanguage } = useLanguage()
 
     // useEffect de Auth
     useEffect(() => {
@@ -183,18 +187,24 @@ export function ToDo() {
 
             <form className={taskNameError ? 'form-error' : ''} onSubmit={event => createTask(event)}>
 
-                <h1>Cadastre uma nova tarefa</h1>
+                <h1>{contents.toDoComponent.form.title[currentLanguage]}</h1>
 
                 <div className='form-controller'>
-                    <label htmlFor="">Nome</label>
+                    <label htmlFor="">{
+                        contents.toDoComponent.form.inputName.label[currentLanguage]}
+                    </label>
                     <input
                         type="text"
                         value={taskName}
                         onChange={event => setTaskName(event.target.value)} />
-                        <small>Por favor, preencha o nome com mais de 4 caracteres</small>
+                        <small>
+                            {contents.toDoComponent.form.inputName.error[currentLanguage]}
+                        </small>
                 </div>
 
-                <button disabled={taskNameError}>Cadastrar</button>
+                <button disabled={taskNameError}>
+                    {contents.toDoComponent.form.buttoName[currentLanguage]}
+                </button>
 
             </form>
 
@@ -202,7 +212,7 @@ export function ToDo() {
 
                 <h1>Tarefas criadas</h1>
 
-                <section>
+                <section className='itens'>
 
                     {
 

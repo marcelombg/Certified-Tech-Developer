@@ -6,6 +6,11 @@ import './style.scss'
 
 export function MainLayout() {
 
+    let contents = {
+        english: {},
+        portuguese: {},
+    }
+
     // Importação do Tema utilização o Hook customizado "useTheme"
     const { theme } = useTheme()
 
@@ -69,7 +74,6 @@ export function MainLayout() {
                 </section>
             </aside>
             <main className='main-layout-component-main'>
-                <p>O conteúdo será carregado aqui dentro:</p>
                 <Outlet />
             </main>
         </div>
