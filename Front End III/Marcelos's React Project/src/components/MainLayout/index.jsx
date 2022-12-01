@@ -6,6 +6,11 @@ import './style.scss'
 
 export function MainLayout() {
 
+    let contents = {
+        english: {},
+        portuguese: {},
+    }
+
     // Importação do Tema utilização o Hook customizado "useTheme"
     const { theme } = useTheme()
 

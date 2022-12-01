@@ -4,8 +4,7 @@
     grid-template-columns: 300px 1fr;
     grid-template-areas:
     'header header'
-    'aside  main'
-    ;
+    'aside  main';
     gap: 12px;
 
     // Estilização para o Modo Dark
@@ -34,27 +33,21 @@
     // Estilização para o Modo Light
     &.light {
 
-        * {
-
-            color: black;
-
-        }
-
         .main-layout-component-header {
 
-            background-color: #e3e3e3;
+            background-color: #818181;
 
         }
 
         .main-layout-component-aside {
 
-            background-color: #e3e3e3;
+            background-color: #929292;
 
         }
 
         .main-layout-component-main {
 
-            background-color: #d7d7d7;
+            background-color: #5c5c5c;
 
         }
 

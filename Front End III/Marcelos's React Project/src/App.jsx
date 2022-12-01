@@ -15,8 +15,10 @@ import { DecimaQuartaAula } from './lessons/DecimaQuartaAula'
 import { DecimaQuintaAula } from './lessons/DecimaQuintaAula'
 import { MainLayout } from "./components/MainLayout"
 import { ToDo } from "./pages/ToDo"
+
 import { ThemeProvider } from "./hooks/useTheme"
 import { Configurations } from "./pages/Configurations"
+import { LanguageProvider } from "./hooks/useLanguage"
 
 function App() {
 
@@ -71,7 +73,9 @@ function App() {
 
   return (
     <ThemeProvider>
-      <RouterProvider router={appRouter} />
+      <LanguageProvider>
+        <RouterProvider router={appRouter} />
+      </LanguageProvider>
     </ThemeProvider>
   )
 
