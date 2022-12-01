@@ -109,4 +109,24 @@
 
     }
 
+    main {
+
+        margin-top: 64px;
+
+        h1 {
+
+            margin-bottom: 32px;
+
+        }
+
+        .itens {
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+        }
+
+    }
+
 }

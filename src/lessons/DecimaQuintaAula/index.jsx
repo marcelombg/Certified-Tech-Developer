@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { DecimaQuintaAulaItem } from '../../components/DecimaQuintaAulaItem'
+import { useTheme } from '../../hooks/useTheme'
 
 import './style.scss'
 
@@ -10,6 +11,8 @@ export function DecimaQuintaAula() {
 
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
+
+    const { theme } = useTheme()
 
     // const { id } = useParams()
 
@@ -59,7 +62,7 @@ export function DecimaQuintaAula() {
 
     return(
 
-        <div className="decima-quarta-aula-component">
+        <div className={`decima-quarta-aula-component ${theme}`}>
 
             <form>
 
