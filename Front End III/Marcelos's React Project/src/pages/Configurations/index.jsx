@@ -27,6 +27,11 @@ export function Configurations() {
                         <input type="radio" name="theme" id="dark" checked={theme === 'dark'} onChange={() => changeTheme('dark')} />
                     </div>
 
+                    <div>
+                        <label htmlFor="dark">Alto Contraste</label>
+                        <input type="radio" name="theme" id="contrast" checked={theme === 'contrast'} onChange={() => changeTheme('contrast')} />
+                    </div>
+
                 </section>
 
             </form>
