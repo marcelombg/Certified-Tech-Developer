@@ -26,13 +26,29 @@ export function Configurations() {
                     <h1>{contents.configurationComponent.sectionTitleTheme[currentLanguage]}</h1>
 
                     <div>
-                        <label htmlFor="light">Claro</label>
                         <input type="radio" name="theme" id="light" checked={theme === 'light'} onChange={() => changeTheme('light')} />
+                        <label htmlFor="light">Claro</label>
                     </div>
 
                     <div>
-                        <label htmlFor="dark">Escuro</label>
                         <input type="radio" name="theme" id="dark" checked={theme === 'dark'} onChange={() => changeTheme('dark')} />
+                        <label htmlFor="dark">Escuro</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="theme" />
+                        <label htmlFor="">Alto Contraste</label>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h1>Acessibilidade</h1>
+
+                    <div>
+                        <label htmlFor="language">Letras grandes</label>
+                        <input type="checkbox" id="" />
                     </div>
 
                 </section>

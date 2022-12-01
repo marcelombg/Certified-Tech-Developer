@@ -6,7 +6,8 @@ const LanguageContext = createContext()
 
 export function LanguageProvider(props) {
 
-    const [currentLanguage, setCurrentLanguage] = useState('english')
+    const currentLanguageSaved = localStorage.getItem('currentLanguage')
+    const [currentLanguage, setCurrentLanguage] = useState( currentLanguageSaved === null ? 'english' : currentLanguageSaved )
     const languagesAllowed = ['portuguese', 'english']
 
     function changeCurrentLanguage(language) {
@@ -16,6 +17,7 @@ export function LanguageProvider(props) {
         if(language !== currentLanguage && languageIsAllowed) {
 
             setCurrentLanguage(language)
+            localStorage.setItem('currentLanguage', language)
 
         }
 
