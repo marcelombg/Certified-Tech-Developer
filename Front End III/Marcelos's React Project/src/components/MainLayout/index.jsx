@@ -69,7 +69,6 @@ export function MainLayout() {
                 </section>
             </aside>
             <main className='main-layout-component-main'>
-                <p>O conteúdo será carregado aqui dentro:</p>
                 <Outlet />
             </main>
         </div>
