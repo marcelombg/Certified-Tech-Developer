@@ -53,6 +53,50 @@
 
     }
 
+    &.contrast {
+
+        .main-layout-component-header {
+
+            background-color: #000000;
+
+        }
+
+        .main-layout-component-aside {
+
+            background-color: #000000;
+
+        }
+
+        .main-layout-component-main {
+
+            background-color: #000000;
+
+        }
+
+    }
+
+    &.bigLetter {
+
+        .main-layout-component-header {
+
+            font-size: 20px;
+
+        }
+
+        .main-layout-component-aside {
+
+            font-size: 20px;
+
+        }
+
+        .main-layout-component-main {
+
+            font-size: 20px;
+
+        }
+
+    }
+
     .main-layout-component-header {
 
         padding: 42px;

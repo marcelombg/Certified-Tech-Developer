@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import { useLetter } from '../../hooks/useLetter'
 import { useTheme } from '../../hooks/useTheme'
 
 import './style.scss'
@@ -13,10 +14,11 @@ export function MainLayout() {
 
     // Importação do Tema utilização o Hook customizado "useTheme"
     const { theme } = useTheme()
+    const { letter } = useLetter()
 
     return (
         // Alteração da Classe baseado no valor do Tema
-        <div className={`main-layout-component ${theme}`}>
+        <div className={`main-layout-component ${theme} ${letter}`}>
             <header className='main-layout-component-header'>
                 <h1>Front-end Terceiro Bimestre - React</h1>
             </header>

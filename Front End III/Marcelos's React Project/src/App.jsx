@@ -19,6 +19,7 @@ import { ToDo } from "./pages/ToDo"
 import { ThemeProvider } from "./hooks/useTheme"
 import { Configurations } from "./pages/Configurations"
 import { LanguageProvider } from "./hooks/useLanguage"
+import { LetterProvider } from "./hooks/useLetter"
 
 function App() {
 
@@ -73,9 +74,11 @@ function App() {
 
   return (
     <ThemeProvider>
-      <LanguageProvider>
-        <RouterProvider router={appRouter} />
-      </LanguageProvider>
+    <LanguageProvider>
+    <LetterProvider>
+    <RouterProvider router={appRouter} />
+    </LetterProvider>
+    </LanguageProvider>
     </ThemeProvider>
   )
 
