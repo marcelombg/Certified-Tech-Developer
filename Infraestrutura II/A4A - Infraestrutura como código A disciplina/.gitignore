@@ -1,6 +1,0 @@
-.terraform
-.terraform.lock.hcl
-terraform.pub
-terraform.tfstate
-terraform.tfstate.backup
-.pub
